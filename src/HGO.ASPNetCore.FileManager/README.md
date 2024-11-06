@@ -1,9 +1,11 @@
-# HGO.ASPNetCore.FileManager (Free & Open Source File Explorer for ASP.Net Core 6+)
-HGO.ASPNetCore.FileManager is a free, open source, feature rich and easy to use file explorer/manager component for ASP.Net Core 6 and above with MIT license!
+# YigitGnc.HGO.ASPNetCore.FileManager (Free & Open Source File Explorer for ASP.Net Core 6+)
+YigitGnc.HGO.ASPNetCore.FileManager is an "enhanced" fork of HGO.ASPNetCore.FileManager free, open source, feature rich and easy to use file explorer/manager component for ASP.Net Core 6 and above with MIT license!
 
-# **[Online Demo](https://filemanager.ghamarzadeh.com/)**
+# **[Online Demo](https://filemanager.yigitgenc.com/)**
 
 ## Features:
+-  Multi Language Support
+-  Enum Member Access for type safety
 -  Manage server's files from client side
 -  Copy & cut & paste functionality
 -  Compress & extract archive files (Rar, Zip, Tar, Tar.GZip, Tar.BZip2, Tar.LZip, Tar.XZ, GZip, 7Zip)

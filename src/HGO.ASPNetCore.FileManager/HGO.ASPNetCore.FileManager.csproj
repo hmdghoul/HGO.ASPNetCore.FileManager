@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
@@ -13,7 +13,7 @@
 		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<SignAssembly>True</SignAssembly>
-		<Authors>SeyedHadi GhamarzadehOsgouei</Authors>
+		<Authors>SeyedHadi GhamarzadehOsgouei, YigitGenc</Authors>
 		<Description>HGO.ASPNetCore.FileManager is a free, open source, feature rich and easy to use file explorer/manager component for ASP.Net Core 6 and above with MIT license!</Description>
 		<Copyright>Copyright SeyedHadi GhamarzadehOsgouei</Copyright>
 		<PackageTags>ASP.NetFileManager, ASP.NetFileExplorer, ASP.NetCoreFileManager, ASP.NetCoreFileExplorer, ASP.NetUploadFile, ASP.NetCoreUploadFile, FileManager, FileExplorer, UploadFile, DownloadFile</PackageTags>
@@ -23,24 +23,31 @@
 		<EnableNETAnalyzers>False</EnableNETAnalyzers>
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>HGO.ASPNetCore.FileManager</Title>
-		<PackageProjectUrl>https://github.com/H-Ghamarzadeh/HGO.ASPNetCore.FileManager</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/H-Ghamarzadeh/HGO.ASPNetCore.FileManager</RepositoryUrl>
+		<Title>yigitgnc/HGO.ASPNetCore.FileManager</Title>
+		<PackageProjectUrl>https://github.com/yigitgnc/HGO.ASPNetCore.FileManager</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/yigitgnc/HGO.ASPNetCore.FileManager</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en</NeutralLanguage>
 		<PackageIcon>Logo.png</PackageIcon>
 		<AssemblyOriginatorKeyFile>HGO.ASPNetCore.FileManager.snk</AssemblyOriginatorKeyFile>
-		<Version>1.0.7</Version>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageId>YigitGnc.$(AssemblyName)</PackageId>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.18</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.27" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.10" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.10" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.6.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="SharpCompress" Version="0.36.0" />
+		<PackageReference Include="SharpCompress" Version="0.38.0" />
 	</ItemGroup>
 
 	<ItemGroup>

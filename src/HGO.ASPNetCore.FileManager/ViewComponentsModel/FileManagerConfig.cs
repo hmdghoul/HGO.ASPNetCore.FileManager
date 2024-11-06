@@ -1,9 +1,13 @@
-﻿namespace HGO.ASPNetCore.FileManager.ViewComponentsModel
+﻿using HGO.ASPNetCore.FileManager.Enums;
+using HGO.ASPNetCore.FileManager.Models.LanguageModels;
+using HGO.ASPNetCore.FileManager.Models.LanguageModels.BuiltIn;
+
+namespace HGO.ASPNetCore.FileManager.ViewComponentsModel
 {
     public class FileManagerConfig
     {
         private byte _compressionLevel = 6;
-        
+
         /// <summary>
         /// The maximum storage space (in megabytes) that the user can use
         /// </summary>
@@ -18,7 +22,7 @@
         /// The maximum filesize (in megabytes) that is allowed to be uploaded.
         /// </summary>
         public long MaxFileSizeToUploadMByte { get; set; } = 256;
-        
+
         /// <summary>
         /// Whether you want files to be uploaded in chunks to your server. 
         /// </summary>
@@ -33,7 +37,7 @@
         /// Whether a chunk should be retried if it fails.
         /// </summary>
         public bool RetryChunks { get; set; } = true;
-        
+
         /// <summary>
         /// If retryChunks is true, how many times should it be retried.
         /// </summary>
@@ -43,7 +47,7 @@
         /// How many file uploads to process in parallel.
         /// </summary>
         public int ParallelUploads { get; set; } = 1;
-        
+
         /// <summary>
         /// Allowed file extensions to upload (comma separated). If not set, there will be no file format limit for upload.
         /// e.g.: ".pdf,.png"
@@ -57,7 +61,7 @@
         /// "ToggleView", "Browse", "Reload", "Breadcrumb", "FoldersTree", "MenuBar",
         /// "ContextMenu", "FilePreview", "View"
         /// </summary>
-        public List<string> DisabledFunctions { get; set; } = new List<string>();
+        public HashSet<Command> DisabledFunctions { get; set; } = new HashSet<Command>();
 
         /// <summary>
         /// Compression Level: from 0 (fastest) to 9 (best compression)
@@ -71,6 +75,16 @@
                 else if (value > 9) { _compressionLevel = 9; }
                 else { _compressionLevel = value; }
             }
-        } 
+        }
+
+        /// <summary>
+        /// Language For UI Default is (Built-In) new EnglishLanguage();
+        /// Built-In alternative: TurkishLanguage();
+        /// or CustomLanguage() for setting custom properties...
+        /// </summary>
+        public ILanguage Language { get; set; } = new EnglishLanguage();
+
+
+
     }
 }
